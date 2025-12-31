@@ -4,72 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabal Yadav | Portfolio</title>
-
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-<div class="layout">
+<div class="wrapper">
 
-  <!-- SIDEBAR -->
+  <!-- LEFT FIXED PANEL -->
   <aside class="sidebar">
-    <div class="profile">
-      <div class="profile-img">
-        <img src="assets/images/profile/profile.jpg" alt="Prabal Yadav" />
-      </div>
-
+    <div class="sidebar-inner">
       <h1>Prabal <span>Yadav</span></h1>
+      <h2>Software Developer</h2>
 
-      <p class="role">
-        Software Developer<br />
-        Team Lead & Prompt Engineer
+      <p class="tagline">
+        Software Developer • Team Lead • Prompt Engineer  
+        <br />
+        Building scalable systems, leading teams, and crafting
+        production-ready software with clarity and ownership.
       </p>
-
-      <p class="summary">
-        I build scalable systems, lead cross-functional teams, and use AI-driven
-        workflows to turn ideas into production-ready software.
-      </p>
-
-      <p class="email">📩 prabalforbuisness@gmail.com</p>
 
       <nav>
-        <ul>
-          <li><a href="#about" class="nav-link active">About</a></li>
-          <li><a href="#ideology" class="nav-link">Ideology</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#more" class="nav-link">More</a></li>
-        </ul>
+        <span data-index="0" class="active">ABOUT</span>
+        <span data-index="1">IDEOLOGY</span>
+        <span data-index="2">SKILLS</span>
+        <span data-index="3">EXPERIENCE</span>
+        <span data-index="4">EDUCATION</span>
+        <span data-index="5">MORE</span>
       </nav>
-
-      <div class="socials">
-        <img src="assets/images/icons/instagram.svg" alt="Instagram" />
-      </div>
-
-      <footer>© 2025 Prabal Yadav</footer>
     </div>
   </aside>
 
-  <!-- CONTENT -->
+  <!-- RIGHT PANEL -->
   <main class="content">
 
-    <section id="about" class="section">
-      <h2>About Me</h2>
+    <!-- ABOUT -->
+    <section class="panel active">
+      <h3>About Me</h3>
       <p>
         I am a professional and detail-oriented software developer with a strong
-        sense of responsibility and ownership. I believe that good software is
-        built through clarity of thought, clean execution, and consistent effort.
+        sense of responsibility, ownership, and long-term thinking. I believe
+        that good software is built through clarity of thought, clean execution,
+        and consistent effort.
       </p>
       <p>
-        Over time, I have developed the ability to balance technical depth with
-        leadership responsibilities. I enjoy mentoring others, structuring
-        workflows, and ensuring both people and systems operate efficiently.
+        Over time, I have developed the ability to balance deep technical work
+        with leadership responsibilities. I enjoy mentoring others, structuring
+        workflows, and ensuring that both people and systems operate efficiently.
+      </p>
+      <p>
+        I approach every project with a long-term mindset, focusing on
+        maintainability, scalability, and real-world usability rather than
+        shortcuts or temporary solutions.
       </p>
     </section>
 
-    <section id="ideology" class="section">
-      <h2>Ideology & Work Ethic</h2>
+    <!-- IDEOLOGY -->
+    <section class="panel">
+      <h3>Ideology & How I Think</h3>
       <p>
         I believe strong teams are built on trust, communication, and shared
         accountability. I value environments where learning is encouraged and
@@ -80,52 +71,114 @@
         I focus on understanding the problem deeply before designing structured
         and practical solutions.
       </p>
-    </section>
-
-    <section id="skills" class="section">
-      <h2>Skills & Expertise</h2>
-
-      <h3>Technical</h3>
       <p>
-        I work primarily with Python, Django, JavaScript, HTML, and CSS to build
-        full-stack applications. I have experience designing backend systems,
-        working with databases, and deploying applications on cloud platforms.
-      </p>
-
-      <ul>
-        <li>Python, Django, JavaScript</li>
-        <li>HTML, CSS</li>
-        <li>MySQL, PostgreSQL, MongoDB</li>
-        <li>AWS, Git, Linux</li>
-      </ul>
-    </section>
-
-    <section id="experience" class="section">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>PinkyBill</strong> — Medical billing software</li>
-        <li><strong>PinkMed</strong> — Insurance billing systems</li>
-        <li><strong>AAFileShare</strong> — Secure document sharing</li>
-        <li><strong>KHJ Merger</strong> — PDF processing tools</li>
-      </ul>
-      <p>
-        I contributed to backend logic, system design, and team coordination.
+        My goal is always to contribute positively — not only through code, but
+        also through collaboration, leadership, and consistency.
       </p>
     </section>
 
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <ul>
-        <li>Bachelor of Computer Applications (BCA)</li>
-        <li>Senior Secondary Education</li>
-      </ul>
+    <!-- SKILLS -->
+    <section class="panel">
+      <h3>Skills & Expertise</h3>
+
+      <p>
+        I work primarily as a full-stack developer with experience across backend,
+        frontend, databases, cloud infrastructure, and creative tooling.
+      </p>
+
+      <p><strong>Programming & Frameworks</strong></p>
+      <p>
+        Python, Django, JavaScript, HTML, CSS, TypeScript (learning),
+        Phaser.js (learning for browser-based games).
+      </p>
+
+      <p><strong>Databases & Infrastructure</strong></p>
+      <p>
+        MySQL, PostgreSQL, MongoDB, AWS, Linux-based systems, Git-based workflows.
+      </p>
+
+      <p><strong>Creative & Media Tools</strong></p>
+      <p>
+        DaVinci Resolve for video editing, Blender for 3D modeling,
+        image editing tools, and basic 3D asset creation.
+      </p>
+
+      <p><strong>Prompt Engineering</strong></p>
+      <p>
+        I actively design and refine prompts to accelerate development workflows.
+        This portfolio itself was created entirely through prompt-driven
+        development, demonstrating how AI can be used as a productivity tool.
+      </p>
     </section>
 
-    <section id="more" class="section">
-      <h2>More About Me</h2>
+    <!-- EXPERIENCE -->
+    <section class="panel">
+      <h3>Experience</h3>
+
+      <p>
+        I currently work as a Team Lead, managing cross-functional teams that
+        include frontend developers, backend developers, and production teams.
+      </p>
+
+      <p>
+        I am responsible for system design decisions, task breakdowns,
+        mentoring developers, and ensuring high-quality delivery across projects.
+      </p>
+
+      <p><strong>Notable Projects</strong></p>
+      <p>
+        • PinkyBill – Medical billing platform  
+        <br />
+        • PinkMed – Insurance billing and healthcare systems  
+        <br />
+        • AAFileShare – Secure document sharing platform  
+        <br />
+        • KHJ Merger – High-volume PDF processing and merging tool
+      </p>
+
+      <p>
+        My contributions span backend logic, database design, performance
+        optimization, and cross-team coordination.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="panel">
+      <h3>Education</h3>
+
+      <p>
+        Bachelor of Computer Applications (BCA), where I built a strong foundation
+        in computer science, programming, and software development principles.
+      </p>
+
+      <p>
+        Senior Secondary Education with a focus on logical thinking, mathematics,
+        and problem-solving skills.
+      </p>
+
+      <p>
+        Beyond formal education, I continuously self-learn through real-world
+        projects, experimentation, and building production systems.
+      </p>
+    </section>
+
+    <!-- MORE -->
+    <section class="panel">
+      <h3>More About Me</h3>
+
       <p>
         I am honest, dependable, and committed to continuous improvement. I take
         pride in completing tasks to a high standard while meeting deadlines.
+      </p>
+
+      <p>
+        I enjoy gaming, learning new technologies, building browser-based games,
+        and exploring how software, creativity, and AI intersect.
+      </p>
+
+      <p>
+        I am always open to new challenges that push me to grow — technically,
+        creatively, and as a leader.
       </p>
     </section>
 

@@ -1,26 +1,29 @@
-const sections = document.querySelectorAll(".section");
-const navLinks = document.querySelectorAll(".nav-link");
+const panels = document.querySelectorAll(".panel");
+const navItems = document.querySelectorAll("nav span");
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
+let current = 0;
+let scrolling = false;
 
-        sections.forEach(sec => sec.classList.remove("visible"));
-        entry.target.classList.add("visible");
+function showPanel(index) {
+  if (index < 0 || index >= panels.length) return;
 
-        navLinks.forEach(link => link.classList.remove("active"));
-        const active = document.querySelector(
-          `a[href="#${entry.target.id}"]`
-        );
-        if (active) active.classList.add("active");
-      }
-    });
-  },
-  {
-    rootMargin: "-30% 0px -40% 0px",
-    threshold: 0
-  }
-);
+  panels.forEach(p => p.classList.remove("active"));
+  navItems.forEach(n => n.classList.remove("active"));
 
-sections.forEach(section => observer.observe(section));
+  panels[index].classList.add("active");
+  navItems[index].classList.add("active");
+
+  current = index;
+}
+
+showPanel(0);
+
+window.addEventListener("wheel", (e) => {
+  if (scrolling) return;
+
+  scrolling = true;
+  setTimeout(() => scrolling = false, 700);
+
+  if (e.deltaY > 0) showPanel(current + 1);
+  else showPanel(current - 1);
+});
