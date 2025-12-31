@@ -4,16 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabal Yadav | Portfolio</title>
-
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
 <div class="layout">
 
-  <!-- SIDEBAR -->
+  <!-- LEFT SIDEBAR (UNCHANGED) -->
   <aside class="sidebar">
-    <div class="profile">
+    <div class="sidebar-inner">
 
       <div class="profile-img">
         <img src="assets/images/profile/profile.jpg" alt="Prabal Yadav" />
@@ -31,9 +30,7 @@
         workflows to turn ideas into production-ready software.
       </p>
 
-      <p class="email">
-        📩 prabalforbuisness@gmail.com
-      </p>
+      <p class="email">📩 prabalforbuisness@gmail.com</p>
 
       <nav>
         <ul>
@@ -46,72 +43,51 @@
         </ul>
       </nav>
 
-      <!-- Social Icons -->
       <div class="socials">
-        <a href="#" aria-label="Instagram">
-          <img src="assets/images/icons/instagram.svg" alt="Instagram" />
-        </a>
+        <img src="assets/images/icons/instagram.svg" alt="Instagram" />
       </div>
 
-    </div>
+      <footer>© 2025 Prabal Yadav</footer>
 
-    <footer>© 2025 Prabal Yadav</footer>
+    </div>
   </aside>
 
-  <!-- CONTENT -->
+  <!-- RIGHT CONTENT (FIXED) -->
   <main class="content">
 
-    <section id="about">
+    <section id="about" class="panel">
       <h2>About Me</h2>
-
       <p>
         I am a professional and detail-oriented software developer with a strong
-        sense of responsibility and ownership. I believe that good software is
-        built through clarity of thought, clean execution, and consistent effort.
+        sense of responsibility and ownership. I believe good software is built
+        through clarity of thought, clean execution, and consistent effort.
       </p>
-
       <p>
         Over time, I have developed the ability to balance technical depth with
-        leadership responsibilities. I enjoy mentoring others, structuring
-        workflows, and ensuring that both people and systems operate efficiently.
-      </p>
-
-      <p>
-        I approach every project with a long-term mindset, focusing on
-        maintainability, scalability, and real-world usability rather than
-        shortcuts or temporary solutions.
+        leadership responsibilities while mentoring others and structuring
+        workflows efficiently.
       </p>
     </section>
 
-    <section id="ideology">
+    <section id="ideology" class="panel">
       <h2>Ideology & Work Ethic</h2>
-
       <p>
         I believe strong teams are built on trust, communication, and shared
-        accountability. I value environments where learning is encouraged and
-        feedback is treated as a tool for growth.
+        accountability. I value learning, feedback, and adaptability.
       </p>
-
       <p>
-        I am adaptable, dependable, and solution-driven. When challenges arise,
-        I focus on understanding the problem deeply before designing structured
-        and practical solutions.
-      </p>
-
-      <p>
-        My goal is always to contribute positively — not only through code, but
-        also through collaboration, leadership, and consistency.
+        My focus is always on structured problem-solving and delivering reliable,
+        maintainable solutions.
       </p>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="panel">
       <h2>Skills & Expertise</h2>
 
       <h3>Technical</h3>
       <p>
-        I work primarily with Python, Django, JavaScript, HTML, and CSS to build
-        full-stack applications. I have experience designing backend systems,
-        working with databases, and deploying applications on cloud platforms.
+        Python, Django, JavaScript, HTML, CSS, cloud deployment, and databases
+        form the core of my development experience.
       </p>
 
       <ul>
@@ -120,81 +96,37 @@
         <li>MySQL, PostgreSQL, MongoDB</li>
         <li>AWS, Linux, Git</li>
       </ul>
-
-      <h3>Creative & Tools</h3>
-      <p>
-        Alongside software development, I work with creative tools and workflows.
-        I have experience editing gaming videos and vlogs using DaVinci Resolve,
-        as well as creating 3D models using Blender.
-      </p>
-
-      <ul>
-        <li>DaVinci Resolve (Video Editing)</li>
-        <li>Blender (3D Modeling)</li>
-        <li>Game development exploration with TypeScript & Phaser.js</li>
-      </ul>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="panel">
       <h2>Experience</h2>
 
-      <p>
-        I have worked on multiple production-level projects, often taking
-        responsibility not only for development but also for coordination
-        between teams.
-      </p>
-
       <ul>
-        <li>
-          <strong>PinkyBill</strong> — Workers’ Compensation medical billing
-          software focused on accuracy, reliability, and compliance.
-        </li>
-        <li>
-          <strong>PinkMed</strong> — Private insurance medical billing platform
-          designed to handle real-world healthcare workflows.
-        </li>
-        <li>
-          <strong>AAFileShare</strong> — Secure document-sharing system for doctors
-          and attorneys.
-        </li>
-        <li>
-          <strong>KHJ Merger</strong> — High-volume PDF merging and document
-          handling solution.
-        </li>
+        <li><strong>PinkyBill</strong> — Medical billing platform</li>
+        <li><strong>PinkMed</strong> — Insurance billing system</li>
+        <li><strong>AAFileShare</strong> — Secure document sharing</li>
+        <li><strong>KHJ Merger</strong> — High-volume PDF processing</li>
       </ul>
 
       <p>
-        In these projects, I contributed to backend logic, system design,
-        performance considerations, and team coordination.
+        I contributed to backend logic, system architecture, and team coordination
+        across these projects.
       </p>
     </section>
 
-    <section id="education">
+    <section id="education" class="panel">
       <h2>Education</h2>
-
-      <p>
-        I have completed my formal education in computer applications, where I
-        built a strong foundation in programming, systems, and problem-solving.
-      </p>
-
       <ul>
         <li>Bachelor of Computer Applications (BCA)</li>
-        <li>Senior Secondary Education (Non-Medical with Biology)</li>
+        <li>Senior Secondary Education</li>
       </ul>
     </section>
 
-    <section id="more">
+    <section id="more" class="panel">
       <h2>More About Me</h2>
-
       <p>
-        I am honest, dependable, and committed to continuous improvement. I take
-        pride in completing tasks to a high standard while meeting deadlines.
-      </p>
-
-      <p>
-        I am always open to new challenges that push me to grow — whether that is
-        learning new technologies, leading teams, or exploring creative
-        disciplines.
+        I am dependable, honest, and continuously focused on growth. I enjoy
+        challenges that push me technically and creatively.
       </p>
     </section>
 
