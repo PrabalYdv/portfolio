@@ -5,20 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabal Yadav | Portfolio</title>
 
-  <!-- IMPORTANT: correct CSS path -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
 <div class="layout">
 
-  <!-- LEFT SIDEBAR -->
+  <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <div class="avatar">
-        <!-- optional image -->
-        <!-- <img src="assets/images/profile.jpg" alt="Prabal Yadav" /> -->
+    <div class="profile">
+      <div class="profile-img">
+        <img src="assets/images/profile/profile.jpg" alt="Prabal Yadav" />
       </div>
 
       <h1>Prabal <span>Yadav</span></h1>
@@ -29,94 +26,112 @@
       </p>
 
       <p class="summary">
-        I design scalable systems, lead teams, and turn ideas into reliable,
-        production-ready software.
+        I build scalable systems, lead cross-functional teams, and use AI-driven
+        workflows to turn ideas into production-ready software.
       </p>
 
-      <p class="email">
-        prabalforbuisness@gmail.com
-      </p>
+      <p class="email">📩 prabalforbuisness@gmail.com</p>
 
       <nav>
-        <a href="#about">About</a>
-        <a href="#ideology">Ideology</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#more">More</a>
+        <ul>
+          <li><a href="#about" class="nav-link active">About</a></li>
+          <li><a href="#ideology" class="nav-link">Ideology</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#more" class="nav-link">More</a></li>
+        </ul>
       </nav>
 
-      <footer>© 2025 Prabal Yadav</footer>
+      <div class="socials">
+        <img src="assets/images/icons/instagram.svg" alt="Instagram" />
+      </div>
 
+      <footer>© 2025 Prabal Yadav</footer>
     </div>
   </aside>
 
-  <!-- RIGHT CONTENT -->
+  <!-- CONTENT -->
   <main class="content">
 
-    <section id="about">
+    <section id="about" class="section">
       <h2>About Me</h2>
       <p>
-        I am a detail-oriented software developer with a strong sense of ownership.
-        I believe good software is built through clarity of thought, disciplined
-        execution, and long-term thinking.
+        I am a professional and detail-oriented software developer with a strong
+        sense of responsibility and ownership. I believe that good software is
+        built through clarity of thought, clean execution, and consistent effort.
       </p>
       <p>
-        I enjoy structuring systems, mentoring people, and ensuring teams and
-        technology grow together.
+        Over time, I have developed the ability to balance technical depth with
+        leadership responsibilities. I enjoy mentoring others, structuring
+        workflows, and ensuring both people and systems operate efficiently.
       </p>
     </section>
 
-    <section id="ideology">
-      <h2>Ideology</h2>
+    <section id="ideology" class="section">
+      <h2>Ideology & Work Ethic</h2>
       <p>
-        Strong teams are built on trust, communication, and accountability.
-        I value learning, adaptability, and thoughtful problem-solving.
+        I believe strong teams are built on trust, communication, and shared
+        accountability. I value environments where learning is encouraged and
+        feedback is treated as a tool for growth.
+      </p>
+      <p>
+        I am adaptable, dependable, and solution-driven. When challenges arise,
+        I focus on understanding the problem deeply before designing structured
+        and practical solutions.
       </p>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+    <section id="skills" class="section">
+      <h2>Skills & Expertise</h2>
+
+      <h3>Technical</h3>
+      <p>
+        I work primarily with Python, Django, JavaScript, HTML, and CSS to build
+        full-stack applications. I have experience designing backend systems,
+        working with databases, and deploying applications on cloud platforms.
+      </p>
+
       <ul>
         <li>Python, Django, JavaScript</li>
         <li>HTML, CSS</li>
         <li>MySQL, PostgreSQL, MongoDB</li>
         <li>AWS, Git, Linux</li>
-        <li>DaVinci Resolve, Blender</li>
       </ul>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="section">
       <h2>Experience</h2>
       <ul>
-        <li>PinkyBill — Medical billing software</li>
-        <li>PinkMed — Insurance systems</li>
-        <li>AAFileShare — Secure document sharing</li>
-        <li>KHJ Merger — PDF processing tools</li>
+        <li><strong>PinkyBill</strong> — Medical billing software</li>
+        <li><strong>PinkMed</strong> — Insurance billing systems</li>
+        <li><strong>AAFileShare</strong> — Secure document sharing</li>
+        <li><strong>KHJ Merger</strong> — PDF processing tools</li>
       </ul>
+      <p>
+        I contributed to backend logic, system design, and team coordination.
+      </p>
     </section>
 
-    <section id="education">
+    <section id="education" class="section">
       <h2>Education</h2>
       <ul>
-        <li>Bachelor of Computer Applications</li>
+        <li>Bachelor of Computer Applications (BCA)</li>
         <li>Senior Secondary Education</li>
       </ul>
     </section>
 
-    <section id="more">
-      <h2>More</h2>
+    <section id="more" class="section">
+      <h2>More About Me</h2>
       <p>
-        I am dependable, honest, and constantly learning. I enjoy challenges that
-        push me technically and creatively.
+        I am honest, dependable, and committed to continuous improvement. I take
+        pride in completing tasks to a high standard while meeting deadlines.
       </p>
     </section>
 
   </main>
-
 </div>
 
-<!-- IMPORTANT: correct JS path -->
 <script src="assets/js/main.js"></script>
 </body>
 </html>
