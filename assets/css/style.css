@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -5,18 +6,20 @@
   font-family: system-ui, sans-serif;
 }
 
+/* BASE */
 body {
   background: radial-gradient(circle at top left, #0f172a, #020617);
   color: #e5e7eb;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* LAYOUT */
 .wrapper {
   display: grid;
   grid-template-columns: 360px 1fr;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* LEFT PANEL */
@@ -63,15 +66,17 @@ nav span {
   text-transform: uppercase;
   color: #64748b;
   cursor: pointer;
+  user-select: none;
 }
 
 nav span.active {
   color: #e5e7eb;
 }
 
-/* RIGHT SIDE */
+/* RIGHT PANEL (DESKTOP) */
 .content {
   position: relative;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -85,11 +90,13 @@ nav span.active {
   opacity: 0;
   transform: translateY(80px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
 }
 
 .panel.active {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .panel h3 {
@@ -104,28 +111,52 @@ nav span.active {
   color: #cbd5f5;
 }
 
-/* MOBILE */
+/* ---------------- MOBILE / TABLET ---------------- */
 @media (max-width: 900px) {
+
   body {
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .wrapper {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .sidebar {
     padding: 32px;
   }
 
+  .sidebar-inner {
+    position: static;
+  }
+
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav span {
+    font-size: 0.7rem;
+  }
+
   .content {
     position: static;
+    height: auto;
+    overflow: visible;
   }
 
   .panel {
     position: static;
     opacity: 1;
     transform: none;
+    pointer-events: auto;
     padding: 64px 32px;
+    margin-bottom: 48px;
+  }
+
+  .panel h3 {
+    font-size: 2.2rem;
   }
 }

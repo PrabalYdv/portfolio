@@ -4,6 +4,13 @@ const navItems = document.querySelectorAll("nav span");
 let current = 0;
 let scrolling = false;
 
+// Detect touch devices
+const isTouch =
+  "ontouchstart" in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0;
+
+// Show panel (desktop mode)
 function showPanel(index) {
   if (index < 0 || index >= panels.length) return;
 
@@ -16,14 +23,36 @@ function showPanel(index) {
   current = index;
 }
 
-showPanel(0);
+// DESKTOP ONLY – wheel navigation
+if (!isTouch) {
+  showPanel(0);
 
-window.addEventListener("wheel", (e) => {
-  if (scrolling) return;
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      if (scrolling) return;
 
-  scrolling = true;
-  setTimeout(() => scrolling = false, 700);
+      scrolling = true;
+      setTimeout(() => (scrolling = false), 700);
 
-  if (e.deltaY > 0) showPanel(current + 1);
-  else showPanel(current - 1);
+      if (e.deltaY > 0) showPanel(current + 1);
+      else showPanel(current - 1);
+    },
+    { passive: true }
+  );
+}
+
+// TAP / CLICK NAVIGATION (ALL DEVICES)
+navItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    showPanel(index);
+
+    // Smooth scroll for mobile
+    if (isTouch) {
+      panels[index].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
 });
