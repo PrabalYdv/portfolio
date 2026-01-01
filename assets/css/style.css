@@ -1,26 +1,27 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
-/* BASE */
+/* ================= BASE ================= */
 body {
   background: radial-gradient(circle at top left, #0f172a, #020617);
   color: #e5e7eb;
   overflow-x: hidden;
 }
 
-/* LAYOUT */
+/* ================= LAYOUT ================= */
 .wrapper {
   display: grid;
   grid-template-columns: 360px 1fr;
   min-height: 100vh;
 }
 
-/* SIDEBAR */
+/* ================= SIDEBAR ================= */
 .sidebar {
   padding: 64px 48px;
 }
@@ -30,8 +31,26 @@ body {
   top: 48px;
 }
 
+/* PROFILE IMAGE */
+.profile-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 2px solid #38bdf8;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NAME + TITLE */
 .sidebar h1 {
   font-size: 2.6rem;
+  line-height: 1.1;
 }
 
 .sidebar h1 span {
@@ -41,9 +60,11 @@ body {
 .sidebar h2 {
   margin-top: 8px;
   font-size: 1rem;
+  font-weight: 500;
   color: #94a3b8;
 }
 
+/* TAGLINE */
 .tagline {
   margin-top: 24px;
   font-size: 0.95rem;
@@ -51,7 +72,7 @@ body {
   line-height: 1.6;
 }
 
-/* NAV */
+/* ================= NAV ================= */
 nav {
   margin-top: 48px;
   display: flex;
@@ -65,13 +86,46 @@ nav span {
   text-transform: uppercase;
   color: #64748b;
   cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+nav span:hover {
+  color: #94a3b8;
 }
 
 nav span.active {
   color: #e5e7eb;
 }
 
-/* CONTENT */
+/* ================= SIDEBAR CONTACT ================= */
+.sidebar-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-footer a {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-decoration: none;
+  word-break: break-word;
+  transition: color 0.2s ease;
+}
+
+.sidebar-footer a:hover {
+  color: #38bdf8;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  scroll-behavior: smooth;
+}
+
+/* ================= PANELS ================= */
 .panel {
   min-height: 100vh;
   padding: 120px;
@@ -92,7 +146,7 @@ nav span.active {
   color: #cbd5f5;
 }
 
-/* MOBILE */
+/* ================= MOBILE / TABLET ================= */
 @media (max-width: 900px) {
   .wrapper {
     grid-template-columns: 1fr;
@@ -106,7 +160,13 @@ nav span.active {
     position: static;
   }
 
+  .profile-image {
+    width: 90px;
+    height: 90px;
+  }
+
   nav {
+    margin-top: 32px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 12px;
@@ -114,6 +174,11 @@ nav span.active {
 
   nav span {
     font-size: 0.7rem;
+  }
+
+  .sidebar-footer {
+    margin-top: 24px;
+    padding-top: 16px;
   }
 
   .panel {
