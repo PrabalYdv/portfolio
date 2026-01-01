@@ -4,13 +4,11 @@ const navItems = document.querySelectorAll("nav span");
 let current = 0;
 let scrolling = false;
 
-// Detect touch devices
-const isTouch =
-  "ontouchstart" in window ||
-  navigator.maxTouchPoints > 0 ||
-  navigator.msMaxTouchPoints > 0;
+// TRUE device detection
+const isTouchDevice =
+  window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 
-// Show panel (desktop mode)
+// Desktop panel switch
 function showPanel(index) {
   if (index < 0 || index >= panels.length) return;
 
@@ -23,36 +21,33 @@ function showPanel(index) {
   current = index;
 }
 
-// DESKTOP ONLY – wheel navigation
-if (!isTouch) {
+// DESKTOP: wheel navigation
+if (!isTouchDevice) {
   showPanel(0);
 
-  window.addEventListener(
-    "wheel",
-    (e) => {
-      if (scrolling) return;
+  window.addEventListener("wheel", (e) => {
+    if (scrolling) return;
 
-      scrolling = true;
-      setTimeout(() => (scrolling = false), 700);
+    scrolling = true;
+    setTimeout(() => scrolling = false, 700);
 
-      if (e.deltaY > 0) showPanel(current + 1);
-      else showPanel(current - 1);
-    },
-    { passive: true }
-  );
+    if (e.deltaY > 0) showPanel(current + 1);
+    else showPanel(current - 1);
+  });
 }
 
-// TAP / CLICK NAVIGATION (ALL DEVICES)
+// CLICK / TAP NAVIGATION
 navItems.forEach((item, index) => {
   item.addEventListener("click", () => {
-    showPanel(index);
 
-    // Smooth scroll for mobile
-    if (isTouch) {
+    if (!isTouchDevice) {
+      showPanel(index);
+    } else {
       panels[index].scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: "start"
       });
     }
+
   });
 });
